@@ -12,7 +12,7 @@ https://github.com/ODU33104/rive-mcp
 
 これは実際に`riv_create`だけで生成したアニメーションです。Riveエディタは一度も開いていません。
 
-<img src="https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/showcase.apng" width="420" alt="riv_createだけで生成したアニメーション">
+![riv_createだけで生成したアニメーション](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/showcase.apng)
 
 npmで入ります。
 
