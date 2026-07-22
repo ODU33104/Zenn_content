@@ -3,7 +3,7 @@ title: "Riveのエディタを起動せずに.rivを作って編集できるMCP�
 emoji: "🎬"
 type: "tech"
 topics: ["rive", "mcp", "claude", "animation", "typescript"]
-published: false
+published: true
 ---
 
 Riveはインタラクティブアニメーションのツールとしてかなり気に入って使っています。ただ、.rivファイルをプログラムから直接いじる手段がほぼありませんでした。公式のMCPサーバーはエディタが起動している前提だし、サードパーティのものは有料。「.rivさえあれば動く、なんならAIに最初から.rivを作らせたい」というのが動機で、バイナリフォーマットを自分で解析してMCPサーバーを書きました。rive-mcpという名前で公開しています。
