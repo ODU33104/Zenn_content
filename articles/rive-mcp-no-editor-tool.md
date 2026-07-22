@@ -10,9 +10,9 @@ Riveはインタラクティブアニメーションのツールとしてかな�
 
 https://github.com/ODU33104/rive-mcp
 
-これは実際に`riv_create`だけで生成したアニメーションです。Riveエディタは一度も開いていません。
+これは実際にこのツールだけで生成した天気ウィジェットです。太陽・雲・稲妻のアートワークはプロ製（Twemoji）をSVGで取り込み、配色と動きはサーバーが提供するトークンとプリセットで組んでいます。Riveエディタは一度も開いていません。
 
-![riv_createだけで生成したアニメーション](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/showcase-orbit.apng)
+![rive-mcpで生成した天気ウィジェット](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/showcase-weather.gif)
 
 npmで入ります。
 
@@ -53,7 +53,9 @@ Webスタジオはこんな見た目です。階層ツリー、キャンバス�
 
 `riv_create`は放っておくと図形が全部直線、色は単色べた塗り、イージングも全部linearという、いかにも仮置きっぽい絵になりがちです。これを踏まえて、頂点にベジェハンドルを付けて有機的な曲線を描けるようにしたのと、バネのように弾む`elastic`系のイージングを追加しました。あわせて、この手のコツ（色の選び方、曲線の作り方、イージングの意味など）をまとめた設計ガイドラインをMCPの`prompts`機能で公開し、同じ内容を`skills/rive-design-guidelines/SKILL.md`としてリポジトリにも同梱しています。MCPのpromptsに対応していないクライアントでも、このファイルをそのままSkillとして読み込めば同じ知見を使えます。
 
-冒頭に貼った宇宙背景のアニメーションも、この仕組みで作ったものです。Claude（Sonnet 5）に「宇宙を舞台に、リングのある惑星が浮かんでいて、彗星が流れて、ロゴがバネみたいに弾んで出てくる絵を作って」と頼み、背景の雰囲気や彗星の軌道を何度かフィードバックしながら仕上げました。図形もイージングも`riv_create`のJSON経由で生成していて、Riveエディタは今回も一度も開いていません。
+次の宇宙背景のアニメーションは、この仕組みで作ったものです。Claude（Sonnet 5）に「宇宙を舞台に、リングのある惑星が浮かんでいて、彗星が流れて、ロゴがバネみたいに弾んで出てくる絵を作って」と頼み、背景の雰囲気や彗星の軌道を何度かフィードバックしながら仕上げました。図形もイージングも`riv_create`のJSON経由で生成していて、Riveエディタは今回も一度も開いていません。
+
+![riv_createだけで生成した宇宙アニメーション](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/showcase-orbit.apng)
 
 ## 壊れた.rivを機械的に見つける
 
