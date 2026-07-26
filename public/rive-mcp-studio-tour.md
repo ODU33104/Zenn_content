@@ -1,11 +1,19 @@
 ---
-title: "rive-mcpにブラウザだけで動くRive編集Studioを足した"
-emoji: "🖥️"
-type: "tech"
-topics: ["rive", "mcp", "claude", "typescript"]
-published: true
+title: rive-mcpにブラウザだけで動くRive編集Studioを足した
+tags:
+  - rive
+  - mcp
+  - claude
+  - typescript
+private: false
+updated_at: ''
+id: null
+organization_url_name: null
+slide: false
+ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
-
 rive-mcpにブラウザだけで動くRive編集画面を足した。Studioと呼んでいる。Riveの公式エディタを一度も起動せずに、生成した.rivをその場で確認しながら手で微調整できる。
 
 前回の記事では「.rivをJSONから生成するMCPサーバー」としての全体像を書いた。あれから触り続けているうちにStudio側の機能がかなり増えたので、今回は画面と一緒に7つの機能を紹介する。
