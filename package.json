@@ -1,0 +1,25 @@
+{
+  "name": "zenn_content",
+  "version": "1.0.0",
+  "description": "Zenn_content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "convert:qiita": "node scripts/zenn-to-qiita.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ODU33104/Zenn_content.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ODU33104/Zenn_content/issues"
+  },
+  "homepage": "https://github.com/ODU33104/Zenn_content#readme",
+  "devDependencies": {
+    "@qiita/qiita-cli": "^1.9.1",
+    "js-yaml": "^5.2.2"
+  }
+}
