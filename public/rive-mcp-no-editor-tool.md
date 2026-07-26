@@ -57,17 +57,17 @@ Claude Codeを使っている場合は、プラグインとして入れる方が
 
 Webスタジオはこんな見た目です。階層ツリー、キャンバス上でのドラッグ操作、インスペクタでの数値編集、キーフレームのタイムラインが一通り揃っています。
 
-![Studio 全体像 — 階層ツリー・キャンバス・インスペクタ・タイムライン](/images/rive-mcp/studio-overview.png)
+![Studio 全体像 — 階層ツリー・キャンバス・インスペクタ・タイムライン](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-overview.png)
 
 右側にある「AIへの指示」ボックスがこのツールの肝です。ブラウザ上で人間が修正依頼を書くと、Claudeがそれを`riv_studio_notes`ツールで拾って`riv_edit`で直す、というループになっています。AIに大枠を作らせて、細かい位置調整や色味だけ人間が手で詰める、という分業がここで成立します。
 
 ツールバーからはPNG/APNG/GIF/WebMへのその場エクスポートもできます。MCP経由で往復しなくても、ブラウザだけでさっと確認用の書き出しが完結します。
 
-![エクスポートバー — PNG/APNG/GIF/WebMをその場書き出し](/images/rive-mcp/studio-export.png)
+![エクスポートバー — PNG/APNG/GIF/WebMをその場書き出し](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-export.png)
 
 ステートマシンの実行もブラウザ内で完結します。bool入力のON/OFFやtriggerの発火をパネルから操作して、遷移の挙動をその場で確かめられます。
 
-![ステートマシン実行パネル — bool/trigger入力を操作](/images/rive-mcp/studio-sm-inputs.png)
+![ステートマシン実行パネル — bool/trigger入力を操作](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-sm-inputs.png)
 
 ## AIが「それっぽく」作れるようにする
 

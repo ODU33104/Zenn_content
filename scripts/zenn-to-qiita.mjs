@@ -4,6 +4,13 @@ import * as yaml from "js-yaml";
 
 const ARTICLES_DIR = "articles";
 const PUBLIC_DIR = "public";
+const ZENN_IMAGE_BASE = "/images/rive-mcp/";
+const GITHUB_IMAGE_BASE =
+  "https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/";
+
+function rewriteImagePaths(body) {
+  return body.split(ZENN_IMAGE_BASE).join(GITHUB_IMAGE_BASE);
+}
 
 function splitFrontmatter(raw) {
   const m = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
@@ -44,7 +51,7 @@ function convert(slug) {
     "---\n" +
     yaml.dump(qiitaFrontmatter, { lineWidth: -1 }) +
     "---\n" +
-    body.trimStart();
+    rewriteImagePaths(body.trimStart());
 
   fs.mkdirSync(PUBLIC_DIR, { recursive: true });
   fs.writeFileSync(qiitaPath, out);

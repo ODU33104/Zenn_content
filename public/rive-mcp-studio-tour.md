@@ -24,7 +24,7 @@ https://github.com/ODU33104/rive-mcp
 
 画面下部には、トラックごとのキーフレームを並べたドープシートがある。ズームで細かい区間に寄れて、再生速度も変えられる。細部を詰めたいときも、全体の流れをつかみたいときも、同じ画面で済む。
 
-![タイムライン](/images/rive-mcp/studio-timeline.png)
+![タイムライン](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-timeline.png)
 
 ## カーブエディタで制御点を直接ドラッグしてイージングを作れる
 
@@ -32,7 +32,7 @@ https://github.com/ODU33104/rive-mcp
 
 実装で地味に手間取ったのが、区間とキーフレームのズレだった。.rivのバイナリ仕様上、イージングのデータは区間の終点ではなく始点のキーフレームに乗っている。画面では「区間を選んで動かす」という感覚のまま操作させたかったので、内部では選んだ区間から1つ前のキーフレームへ書き込み先をずらす変換を挟んでいる。
 
-![カーブエディタ](/images/rive-mcp/studio-curve.png)
+![カーブエディタ](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-curve.png)
 
 ## ステートマシングラフは遷移とlintの結果を同じ画面で見せる
 
@@ -40,25 +40,25 @@ https://github.com/ODU33104/rive-mcp
 
 `riv_lint`の走査結果もそのまま乗せてある。到達不能なstateは赤、条件なしの自己遷移（無限ループの原因になる）は黄色でハイライトされる。再生中は今アクティブなstateが緑に光るので、「なぜここで止まっているか」をJSONを読まずに確認できるようになった。
 
-![SMグラフビュー](/images/rive-mcp/studio-smgraph.png)
+![SMグラフビュー](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-smgraph.png)
 
 ## 実行パネルでブラウザからbool・triggerを操作できる
 
 グラフの隣には、入力を直接いじれるパネルを置いた。bool入力のON/OFFやtriggerの発火をボタン一つで試せて、遷移がその場で起きる。CLIで`riv_play_state_machine`を叩かなくても、ブラウザだけで動作確認が済むようになった。
 
-![SM実行パネル](/images/rive-mcp/studio-sm-inputs.png)
+![SM実行パネル](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-sm-inputs.png)
 
 ## オニオンスキンで前後フレームの軌跡を重ねて見られる
 
 前後0〜5フレームを、現在のフレームからの距離に応じた濃さで重ねて表示する。アニメーション制作ツールではおなじみの機能だ。これがあると、オブジェクトが実際にどんな軌跡を描いているかを静止画のまま把握できる。動きが直線的すぎないか、カーブがどこかで破綻していないか。再生せずに確認できるようになった。
 
-![オニオンスキン](/images/rive-mcp/studio-onion.png)
+![オニオンスキン](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-onion.png)
 
 ## インスペクタで選択した要素をその場で編集できる
 
 階層ツリーかキャンバス上で要素を選ぶと、位置・回転・スケール・色・テキストをインスペクタから直接変更できる。undo/redoも普通に効く。JSONを書き直してリロードする手間が要らなくなった分、細部の調整はこちらで済ませることが増えた。
 
-![インスペクタ編集](/images/rive-mcp/studio-edit.png)
+![インスペクタ編集](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-edit.png)
 
 ## 「AIへの指示」は選択状態を自動で添付する
 
@@ -66,7 +66,7 @@ https://github.com/ODU33104/rive-mcp
 
 これが地味に効く。人間が「これをもう少し右」とだけ書いても、「これ」が指す対象をAIがUIの状態から拾えるので、指示の精度が上がった。
 
-![AIへの指示](/images/rive-mcp/studio-notes.png)
+![AIへの指示](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-notes.png)
 
 ## 導入は2行で終わる
 
