@@ -4,6 +4,9 @@ import * as yaml from "js-yaml";
 
 const ARTICLES_DIR = "articles";
 const PUBLIC_DIR = "public";
+// Qiita の WAF がシェルスクリプトの一部パターン（cp ... || true、エスケープ済み引用符入りJSON等）を
+// OSコマンドインジェクションと誤検知し 403 Forbidden で弾くケースがある。個別に切り分けが済むまで除外する。
+const QIITA_EXCLUDE = new Set(["zenn-nextjs-egain-error"]);
 const ZENN_IMAGE_BASE = "/images/rive-mcp/";
 const GITHUB_IMAGE_BASE =
   "https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/";
@@ -42,7 +45,7 @@ function convert(slug) {
     id: existing.id ?? null,
     organization_url_name: existing.organization_url_name ?? null,
     slide: false,
-    ignorePublish: false,
+    ignorePublish: QIITA_EXCLUDE.has(slug),
     posting_campaign_uuid: existing.posting_campaign_uuid ?? null,
     agreed_posting_campaign_term: existing.agreed_posting_campaign_term ?? false,
   };
