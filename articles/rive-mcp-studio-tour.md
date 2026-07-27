@@ -1,14 +1,12 @@
 ---
-title: "rive-mcpにブラウザだけで動くRive編集Studioを足した"
+title: "rive-mcpのWebスタジオ、機能がだいぶ増えたので7つ紹介する"
 emoji: "🖥️"
 type: "tech"
 topics: ["rive", "mcp", "claude", "typescript"]
 published: true
 ---
 
-rive-mcpにブラウザだけで動くRive編集画面を足した。Studioと呼んでいる。Riveの公式エディタを一度も起動せずに、生成した.rivをその場で確認しながら手で微調整できる。
-
-前回の記事では「.rivをJSONから生成するMCPサーバー」としての全体像を書いた。あれから触り続けているうちにStudio側の機能がかなり増えたので、今回は画面と一緒に7つの機能を紹介する。
+前回の記事（[Riveのエディタを起動せずに.rivを作って編集できるMCPサーバーを作った](https://zenn.dev/udos/articles/rive-mcp-no-editor-tool)）で、rive-mcpというMCPサーバー全体の話を書いた。そのときブラウザだけで動く編集画面Studioも軽く紹介したが、あれから触り続けているうちに機能がかなり増えたので、今回は画面と一緒に7つの機能をあらためて紹介する。
 
 https://github.com/ODU33104/rive-mcp
 
