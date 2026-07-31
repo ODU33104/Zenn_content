@@ -1,14 +1,14 @@
 ---
 title: Riveのエディタを起動せずに.rivを作って編集できるMCPサーバーを作った
 tags:
-  - rive
-  - mcp
-  - claude
+  - Rive
+  - MCP
+  - Claude
   - animation
-  - typescript
+  - TypeScript
 private: false
-updated_at: ''
-id: null
+updated_at: '2026-07-31T17:05:00+09:00'
+id: 2bba7dc64d4db1065d73
 organization_url_name: null
 slide: false
 ignorePublish: false
