@@ -6,7 +6,7 @@ tags:
   - Claude
   - TypeScript
 private: false
-updated_at: '2026-08-06T13:18:40+09:00'
+updated_at: '2026-08-06T19:49:06+09:00'
 id: e47549a51a2ed8206583
 organization_url_name: null
 slide: false
@@ -16,13 +16,15 @@ agreed_posting_campaign_term: false
 ---
 前回の記事（[Riveのエディタを起動せずに.rivを作って編集できるMCPサーバーを作った](https://zenn.dev/udos/articles/rive-mcp-no-editor-tool)）で、rive-mcpというMCPサーバー全体の話を書いた。そのときブラウザだけで動く編集画面Studioも軽く紹介したが、あれから触り続けているうちに機能がかなり増えたので、今回は画面と一緒に7つの機能をあらためて紹介する。
 
+**2026-08-06追記**: UIを公式Riveエディタのレイアウトに近づける形で全面的に刷新した。階層ツリー、Inspectorの各プロパティ行に付くダイヤ型のキーボタン、下部のステータスバー（Console・Problems・Changes）など、操作の場所を公式の作法に揃えている。以下のスクリーンショットのうち一部は刷新後の画面に差し替えた。
+
 https://github.com/ODU33104/rive-mcp
 
 ## タイムラインで全トラックのキーフレームを見渡せる
 
 画面下部には、トラックごとのキーフレームを並べたドープシートがある。ズームで細かい区間に寄れて、再生速度も変えられる。細部を詰めたいときも、全体の流れをつかみたいときも、同じ画面で済む。
 
-![タイムライン](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-timeline.png)
+![タイムライン](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-timeline-v05.jpg)
 
 ## カーブエディタで制御点を直接ドラッグしてイージングを作れる
 
@@ -38,7 +40,7 @@ https://github.com/ODU33104/rive-mcp
 
 `riv_lint`の走査結果もそのまま乗せてある。到達不能なstateは赤、条件なしの自己遷移（無限ループの原因になる）は黄色でハイライトされる。再生中は今アクティブなstateが緑に光るので、「なぜここで止まっているか」をJSONを読まずに確認できるようになった。
 
-![SMグラフビュー](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-smgraph.png)
+![SMグラフビュー](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-smgraph-v05.jpg)
 
 ## 実行パネルでブラウザからbool・triggerを操作できる
 
@@ -58,13 +60,13 @@ https://github.com/ODU33104/rive-mcp
 
 ![インスペクタ編集](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-edit.png)
 
-## 「AIへの指示」は選択状態を自動で添付する
+## Agentパネルは投稿箱ではなく会話になった
 
-右側にある「AIへの指示」ボックスに修正依頼を書いて送ると、そのとき選択していたオブジェクト・アートボード・アニメーション・再生時刻が自動で添付される。AI側は`riv_studio_notes`というツールでそれを受け取る。
+もともとは「AIへの指示」というテキストボックスに書いて送るだけの、一方通行の投稿箱だった。送った内容は選択オブジェクト・アートボード・アニメーション・再生時刻が自動で添付されて`riv_studio_notes`経由でAIに届くが、AIが何をしたか・なぜそうしたかはStudio側に一切戻ってこなかった。触ってみると「送っても何も起きていないように見える」という不便さが目立った。
 
-これが地味に効く。人間が「これをもう少し右」とだけ書いても、「これ」が指す対象をAIがUIの状態から拾えるので、指示の精度が上がった。
+刷新後は、左パネルの`Agent`アコーディオンの中で吹き出し形式のやり取りになる。AI側は作業が終わったら`riv_studio_notes`の`reply`引数で返信を投げ、それが即座に吹き出しとしてUIに反映される。送信時に添付された文脈（選択・アートボードなど）は吹き出しの下にチップとして表示されるので、何を送ったかも後から追える。
 
-![AIへの指示](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-notes.png)
+![Agentパネルの双方向チャット](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-agent-chat-v05.jpg)
 
 ## 導入は2行で終わる
 
