@@ -3,7 +3,7 @@ title: "Riveのデータバインディングを自前パーサで読めるよ�
 emoji: "🔗"
 type: "tech"
 topics: ["rive", "mcp", "typescript", "claude"]
-published: false
+published: true
 ---
 
 [rive-mcp](https://github.com/ODU33104/rive-mcp)（Riveのエディタを起動せずに.rivを作って編集できるMCPサーバー。[前回の記事](https://zenn.dev/udos/articles/rive-mcp-no-editor-tool)）に、データバインディングの中身を読む機能を足した。やることは「バイナリを解析して構造を表示する」だけのはずだったのに、途中で既存パーサの読み違いが出てきて、修正の影響はそちらのほうが大きかった。今回はその話を中心に、v0.5.0で入った他の機能も並べておく。
