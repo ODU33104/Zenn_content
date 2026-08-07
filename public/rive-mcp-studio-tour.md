@@ -6,7 +6,7 @@ tags:
   - Claude
   - TypeScript
 private: false
-updated_at: '2026-08-07T08:55:12+09:00'
+updated_at: '2026-08-07T09:00:38+09:00'
 id: e47549a51a2ed8206583
 organization_url_name: null
 slide: false
@@ -64,7 +64,7 @@ https://github.com/ODU33104/rive-mcp
 
 もともとは「AIへの指示」というテキストボックスに書いて送るだけの、一方通行の投稿箱だった。送った内容は選択オブジェクト・アートボード・アニメーション・再生時刻が自動で添付されて`riv_studio_notes`経由でAIに届くが、AIが何をしたか・なぜそうしたかはStudio側に一切戻ってこなかった。触ってみると「送っても何も起きていないように見える」という不便さが目立った。
 
-刷新後は、左パネルの`Agent`アコーディオンの中で吹き出し形式のやり取りになる。AI側は作業が終わったら`riv_studio_notes`の`reply`引数で返信を投げ、それが即座に吹き出しとしてUIに反映される。送信時に添付された文脈（選択・アートボードなど）は吹き出しの下にチップとして表示されるので、何を送ったかも後から追える。
+刷新後は会話になった。左パネルの`Agent`アコーディオンの中で、吹き出し形式のやり取りが進む。AI側は作業が終わったら`riv_studio_notes`の`reply`引数で返信を投げ、それが即座に吹き出しとしてUIに反映される。送信時に添付された文脈（選択・アートボードなど）は吹き出しの下にチップとして表示される。何を送ったかも後から追える。
 
 ![Agentパネルの双方向チャット](https://raw.githubusercontent.com/ODU33104/rive-mcp/main/docs/media/studio-agent-chat-v05.jpg)
 
