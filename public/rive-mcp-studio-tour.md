@@ -6,7 +6,7 @@ tags:
   - Claude
   - TypeScript
 private: false
-updated_at: '2026-08-31T20:10:20+09:00'
+updated_at: '2026-08-31T21:20:29+09:00'
 id: e47549a51a2ed8206583
 organization_url_name: null
 slide: false
