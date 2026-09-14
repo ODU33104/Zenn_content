@@ -7,7 +7,7 @@ tags:
   - animation
   - TypeScript
 private: false
-updated_at: '2026-09-15T08:40:59+09:00'
+updated_at: '2026-09-15T08:50:17+09:00'
 id: 2bba7dc64d4db1065d73
 organization_url_name: null
 slide: false
