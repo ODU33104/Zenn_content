@@ -3,7 +3,7 @@ title: "スクショを1枚渡すだけで、AIが「動くプロトタイプ」
 emoji: "📐"
 type: "tech"
 topics: ["rive", "mcp", "figma", "typescript", "claude"]
-published: false
+published: true
 ---
 
 スクショを1枚渡すと、AIが要素を検出して、入場アニメとホバー・プレス付きの「動くプロトタイプ」を作ってくれる——そんなツールを個人開発で作りました。エディタ不要、ローカル完結、無料です。
