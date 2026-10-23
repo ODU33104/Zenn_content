@@ -3,7 +3,7 @@ title: "Riveのデータバインディングを、エディタを開かずに.r
 emoji: "🎚️"
 type: "tech"
 topics: ["rive", "mcp", "claude", "animation", "typescript"]
-published: false
+published: true
 ---
 
 [rive-mcp](https://github.com/ODU33104/rive-mcp)（Riveのエディタを起動せずに.rivを作って編集できるMCPサーバー）は、[以前の記事](https://zenn.dev/udos/articles/rive-mcp-databinding-parser)でデータバインディングを「読む」ところまで対応した。その記事の最後に「次は書く側をやりたい」と書いたので、今回はその続きになる。ViewModelの定義と、それを図形や文字に結ぶ配線を、`riv_create` で.rivに書き込めるようにした。
